@@ -10,8 +10,8 @@ EMAIL_PORT = 1025
 DATABASES = {
     "default": {
         "ENGINE": "django.db.backends.postgresql_psycopg2",
-        "NAME": "gironimopostgres",
-        "USER": "mrochow",
+        "NAME": get_env_variable('GIRONIMODB'),
+        "USER": get_env_variable('DBUSER'),
         "PASSWORD": get_env_variable('DBPASS'),
         "HOST": "localhost",
         "PORT": "",
